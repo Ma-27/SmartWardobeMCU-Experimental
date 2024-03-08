@@ -38,7 +38,6 @@ void CoreController::init() {
     DataChangeListener *dataChangeListener = DataChangeListener::getInstance();
     dataChangeListener->subscribeDataChange();
 
-
     // 连接网络。
     bool result = connectToWifi();
 
@@ -50,7 +49,6 @@ void CoreController::init() {
 
     // 返回连接结果,1表示成功，0表示失败。
     data->logData(String(result), false);
-
 
     // TODO 接下来的是任务调度，模拟线程为每个任务定时执行。当到了规定时间间隔后执行任务。
     // 比如说，使用Lambda表达式安排updateTemperatureAndHumidity作为任务， 更新温湿度
